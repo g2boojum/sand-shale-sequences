@@ -1,0 +1,121 @@
+%filename ==>> CTN8, %formation
+c    ===================================================================
+c    ===================================================================
+c    ===    Tool               : 8in. CTN
+c    ===    Model Type         : Open Hole
+c    ===================================================================
+c    === Model Data
+c    ===    Tool               : CTN8 9.5-in. OD
+c    ===    Detector Azimuth   : 0.0 degrees
+c    ===    Tool Position      : 1.375 in. Standoff
+c    ===    Borehole material  : Fresh Water
+c    ===       %% Barite        : 0
+c    ===       %% Hematite      : 0
+c    ===       %% CaCO3         : 0
+c    ===       %% Gel           : 0
+c    ===       %% NaCl          : 0
+c    ===       %% KCl           : 0
+c    ===       %% KCOOH         : 0
+c    ===       %% NaCOOH        : 0
+c    ===       %% CsCOOH        : 0
+c    ===       %% Oil           : 0
+c    ===       %% Water         : 100
+c    ===    Borehole size      : 12.25 in.
+c    ===    Mudcake thickness  : 0 in.
+c    ===    Casing size        : N/A
+c    ===    Casing weight      : N/A
+c    ===    Cement type        : N/A
+c    ===    Formation          : %formation
+c    ===       porosity        : %porosity
+c    ===       percent mica    : %pct_mica
+c    ===       percent smectite: %pct_smectite
+c    ===    Formation Salinity : 0.0 Kppm NaCl
+c    ===    Formation Temp     : 68.0 F (293.15 K)
+c    ===    Formation Pressure : 14.7 psig
+c    ===================================================================
+c    ===    Source Information
+c    ===    Source Type        : AmBe, 3e+07 neutrons/sec
+c    ===================================================================
+c
+c CELLS
+c
+ 1   0         7:-15:27    $void outside formation
+c      limestone formation
+c
+ 2   3 -%formation_density  6 -7  15  -27
+c
+c     annular borehole
+c
+ 3    1 -0.998153912 5  -6  15  -27
+c
+c NOTE: Tool cells deleted
+c
+c
+
+c SURFACES
+c
+ 1    cz   3.0163
+ 4    cz  11.7475
+ 5    cz  12.065
+6   3 cz  15.5575  $ borehole/formation boundary
+c 6    cz  12.70    $ borehole/formation boundary - 10"
+c 6    cz  15.24    $ borehole/formation boundary - 12"
+c 6    cz  15.5575  $ borehole/formation boundary - 12.25" BASE CASE
+c 6    cz  17.78    $ borehole/formation boundary - 14"
+c 6    cz  20.32    $ borehole/formation boundary - 16"
+ 7  3 cz  100       $ formation outer edge
+c
+c Note: Tool surfaces deleted
+c
+
+c    ===================================================================
+c    ===== Data cards
+c    ===================================================================
+c
+c    ===================================================================
+c    ===== Transformations
+c    ===================================================================
+c
+*tr1   0.53405  0.0  0.0  45  135  90
+*tr2   0.53405  0.0  0.0 -45   45  90
+*tr3   1.0000e-04 0.0000e+00 0.0 $ standoff/azimuth displacement
+c
+c    ===================================================================
+c    ===== Material cards
+c    ===================================================================
+c
+c        1 = Borehole fluid
+c        2 = Collar material
+c        3 = Formation
+c        4 = He-3 (detector)
+c        Note: some materials left out
+c
+c
+c    ===================================================================
+c    ==== Material #    1
+c    ===================================================================
+c    Name    = Fresh Water
+c    Density =    0.9982 g/cc
+c
+   m1  1001.60c 0.666667   8016.60c 0.333333
+c
+c FORMATION
+c
+%formation_card
+c
+c Note: Tool materials deleted.
+c
+c Note: Source, tally, and weight-window descriptions removed
+c
+c
+c    ===================================================================
+c    ===== Problem Cutoff Cards
+c    ===================================================================
+c
+mode  n
+phys:n 15   5e-8              $Emax(n)=15MeV, analog capt. E<2thermal
+cut:n  1e+8 0.0  -5.e-6       $kill if t>1sec, E<0,weight<5e-6minweight
+ctme 1440
+nps  7000000
+prdmp  1j -60
+rand gen=2 seed=%rand_seed        $ random seed
