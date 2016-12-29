@@ -20,6 +20,6 @@ fractions, mcnpelements.py.
 At the time of this work, the following versions of Python and associated
 libraries was used:
 
-python 3.5
-numpy 1.10.4
-pandas 0.18.0
+* python 3.5
+* numpy 1.10.4
+* pandas 0.18.0
