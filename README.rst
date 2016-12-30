@@ -34,4 +34,4 @@ with the exception of chlorite, which comes from
 M. Polyakov, F. Shray, and T. Li, "Application and quality control of core
 data for the development and validation of elemental spectroscopy log
 interpretation", *Petrophysics* **55(5)**, pp. 392-414 (2014)
-<https://www.onepetro.org/journal-paper/SPWLA-2014-v55n5a2>_`.
+<https://www.onepetro.org/journal-paper/SPWLA-2014-v55n5a2>`_.
