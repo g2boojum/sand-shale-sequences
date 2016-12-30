@@ -25,13 +25,13 @@ libraries was used:
 * pandas 0.18.0
 
 Chemical compositions (and densities) of the various clays come from
-`J. La Vigne, M. Herron, and R. Hertzog, "Density-neutron interpretation in
+J. La Vigne, M. Herron, and R. Hertzog, "Density-neutron interpretation in
 shaly sands", 35th SPWLA Annual Logging Symposium in
 Tulsa, OK, paper EEE (1994)
-<https://www.onepetro.org/conference-paper/SPWLA-1994-EEE>`_, 
+[https://www.onepetro.org/conference-paper/SPWLA-1994-EEE], 
 with the exception of chlorite, which comes from
-`S. Herron, M. Herron, I Pirie, P. Saldungaray, P. Craddock, A. Charsky,
+S. Herron, M. Herron, I Pirie, P. Saldungaray, P. Craddock, A. Charsky,
 M. Polyakov, F. Shray, and T. Li, "Application and quality control of core
 data for the development and validation of elemental spectroscopy log
 interpretation", *Petrophysics* **55(5)**, pp. 392-414 (2014)
-<https://www.onepetro.org/journal-paper/SPWLA-2014-v55n5a2>`_.
+[https://www.onepetro.org/journal-paper/SPWLA-2014-v55n5a2].
