@@ -1,8 +1,8 @@
 sand-shale-sequences
 ====================
 
-Supplemental material for Interpretation paper
-----------------------------------------------
+Supplemental material for Interpretation paper http://dx.doi.org/10.1190/INT-2016-0145.1
+----------------------------------------------------------------------------------------
 
 These files show how the elemental composition of the XRD-determined clays
 was computed.
